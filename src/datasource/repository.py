@@ -1,5 +1,5 @@
 #dealing with database operations only , no application logic
-import sys
+from bson import ObjectId
 
 from mongomock import MongoClient
 
@@ -11,6 +11,6 @@ class QuizRepository:
         return list(self.database_client.db.quiz.find())
     
     def get_quiz(self,quiz_id):
-        return self.database_client.db.quiz.find_one({"_id":quiz_id})
+        return self.database_client.db.quiz.find_one({"_id":ObjectId(quiz_id)})
 
       

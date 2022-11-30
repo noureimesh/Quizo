@@ -4,7 +4,7 @@ from bson import ObjectId
 from src.domain.py_object_id import PyObjectId
 
 class Option(BaseModel): 
-    _id:PyObjectId = Field(default_factory=PyObjectId, alias="_id")
+    id: PyObjectId = Field(default_factory=PyObjectId, alias="_id")
     label: str= Field()
     
     class config:

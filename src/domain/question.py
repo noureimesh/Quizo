@@ -4,9 +4,9 @@ from typing import List
 from src.domain.py_object_id import PyObjectId
 
 class Question(BaseModel): 
-    _id:PyObjectId = Field(default_factory=PyObjectId, alias="_id")
+    id: PyObjectId = Field(default_factory=PyObjectId, alias="_id")
     label: str = Field()
-    answer_id: PyObjectId = Field(default_factory=PyObjectId)
+    answer_index: int = Field(default=0)
     options : List[Option] = []
 
     class config:

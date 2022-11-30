@@ -10,7 +10,7 @@ def test_get_quizzes():
     quiz_collection.insert_many(seed_quizzes)
     repo = QuizRepository(database_client= client)
     quizess = repo.get_quizzes()
-    assert len(quizess) ==2
+    assert len(quizess) == 2
 
 def test_get_quiz():
     seed_quizzes = generate_quizzes()
