@@ -7,10 +7,4 @@
 
 ## POST
 ### Solve quiz
-- URL: /quizzes/{quiz_id}
-### Add quiz
-- URL: /quizzes/
-
-## DELETE
-### Delete quiz
-- URL: /quizzes/{quiz_id}
+- URL: /quiz/{quiz_id}/solution

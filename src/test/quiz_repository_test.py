@@ -1,6 +1,6 @@
 import mongomock
 from bson.binary import UuidRepresentation
-from src.datasource.repository import QuizRepository
+from src.datasource.quiz_repository import QuizRepository
 from src.datasource.seed import FIRST_SEEDED_QUIZ_ID, generate_quizzes
 
 def test_get_quizzes():
@@ -9,8 +9,8 @@ def test_get_quizzes():
     quiz_collection = client.db.quiz
     quiz_collection.insert_many(seed_quizzes)
     repo = QuizRepository(database_client= client)
-    quizess = repo.get_quizzes()
-    assert len(quizess) == 2
+    quizzes = repo.get_quizzes()
+    assert len(quizzes) == 2
 
 def test_get_quiz():
     seed_quizzes = generate_quizzes()
