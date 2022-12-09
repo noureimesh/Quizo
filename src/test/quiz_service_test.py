@@ -55,5 +55,3 @@ def test_solve_quiz():
     assert solve_quiz.quiz_id == FIRST_SEEDED_QUIZ_ID
     assert solve_quiz.total_questions_count == 3
     assert solve_quiz.correct_answers_count == 1
-
-

@@ -62,4 +62,3 @@ def generate_quizzes():
 
     quizzes = [quiz_python.dict(by_alias=True),quiz_general.dict(by_alias=True)]
     return quizzes
-

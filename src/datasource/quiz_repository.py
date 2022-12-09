@@ -14,5 +14,3 @@ class QuizRepository:
     
     def get_quiz(self,quiz_id :str) -> dict :
         return self.database_client.db.quiz.find_one({"_id":ObjectId(quiz_id)})
-
-      

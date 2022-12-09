@@ -131,6 +131,3 @@ function fillQuestionAnswerDic(){
     }
     return questionAnswerData
 }
-
-
-

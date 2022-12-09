@@ -10,12 +10,14 @@ from src.domain.quiz_service import QuizService
 from src.domain.py_object_id import PyObjectId
 from src.shared.quiz import Quiz
 from src.shared.solve_quiz_dto import SolveQuizDto
-
+from src.config.confug import Settings
 from src.shared.view_quiz import ViewQuiz
+
 router = APIRouter()
 
 def get_mongo_client():
-    return MongoClient("mongodb+srv://test:1234@cluster0.guuo75j.mongodb.net/?retryWrites=true&w=majority",uuidRepresentation='standard')
+    settings = Settings()
+    return MongoClient(settings.mongo_db_host,uuidRepresentation='standard')
 
 def get_service():
     client= get_mongo_client()
