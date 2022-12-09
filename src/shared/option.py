@@ -1,5 +1,5 @@
 from pydantic import BaseModel,Field
 
-class OptionDto(BaseModel):
+class Option(BaseModel):
     id: str= Field()
     label: str = Field()

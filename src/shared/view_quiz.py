@@ -1,5 +1,5 @@
 from pydantic import BaseModel,Field
 
-class ViewQuizDto(BaseModel):
+class ViewQuiz(BaseModel):
     id: str= Field()
     label: str = Field()

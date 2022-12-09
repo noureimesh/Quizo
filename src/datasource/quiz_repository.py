@@ -1,7 +1,7 @@
 #dealing with database operations only , no application logic
 from bson import ObjectId
 
-from mongomock import MongoClient
+from pymongo import MongoClient
 
 from src.domain.quiz import Quiz
 
